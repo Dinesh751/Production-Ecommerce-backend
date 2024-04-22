@@ -27,7 +27,7 @@ app.use(cors())
 
 
 
-app.use(express.static(path.join(__dirname,"./client/build")));
+
 
 
 //routing
@@ -36,9 +36,7 @@ app.use("/auth",authRoutes)
 app.use("/category",categoryRoutes)
 app.use("/products",productRoutes)
 
-app.get('*',function(req,res){
-   res.sendFile(path.join(__dirname,"./client/build/index.html"));
-})
+
 
 
 
